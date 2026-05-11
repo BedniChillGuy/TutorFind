@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorFind - Поиск репетиторов</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Tutor<span>Find</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="favorite.html">Избранное <span class="favorite-count">0</span></a></li>
+                    <li><a href="recent-compares.html">Сравнения <span class="recent-compare-count">0</span></a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Найди идеального репетитора</h1>
+                <a href="catalog.html" class="btn btn-primary">Начать поиск</a>
+            </div>
+        </section>
+
+        <section class="subjects">
+            <div class="container">
+                <h2>Популярные предметы</h2>
+                <div class="subjects-grid" id="popularSubjects">
+                    <!-- Динамическая загрузка предметов -->
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-strip" id="recentStrip" hidden>
+            <div class="container">
+                <h2>Недавно просмотренные</h2>
+                <div class="recent-strip-grid" id="recentChips"></div>
+                <p class="profile-hint" style="text-align: center; margin-top: 1rem;">
+                    <a href="profile.html">Все записи в профиле</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TutorFind. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/svg-icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/user-storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

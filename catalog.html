@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог репетиторов - TutorFind</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Tutor<span>Find</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="favorite.html">Избранное <span class="favorite-count">0</span></a></li>
+                    <li><a href="recent-compares.html">Сравнения <span class="recent-compare-count">0</span></a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="catalog-layout">
+                <aside class="filters">
+                    <h2>Фильтры</h2>
+                    
+                    <div class="filter-section">
+                        <h3 id="filterSearchTitle">Поиск</h3>
+                        <input type="text" id="searchInput" placeholder="Имя, предмет или курс..." class="filter-input">
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 id="filterSubjectTitle">Предмет</h3>
+                        <select id="subjectFilter" class="filter-select">
+                            <option value="all">Все предметы</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 id="filterPriceTitle">Цена за час</h3>
+                        <div class="price-range">
+                            <input type="number" id="minPrice" placeholder="От" class="filter-input price-input">
+                            <input type="number" id="maxPrice" placeholder="До" class="filter-input price-input">
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Рейтинг</h3>
+                        <select id="ratingFilter" class="filter-select">
+                            <option value="all">Любой</option>
+                            <option value="4.5">От 4.5 и выше</option>
+                            <option value="4">От 4 и выше</option>
+                            <option value="3">От 3 и выше</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="applyFilters" class="btn btn-primary">Применить</button>
+                        <button id="resetFilters" class="btn btn-secondary">Сбросить</button>
+                    </div>
+                </aside>
+
+                <section class="catalog-content">
+                    <div class="catalog-tabs" role="tablist">
+                        <button type="button" class="catalog-tab active" id="tabTutors" data-catalog-tab="tutors" role="tab" aria-selected="true">Репетиторы</button>
+                        <button type="button" class="catalog-tab" id="tabCourses" data-catalog-tab="courses" role="tab" aria-selected="false">Образовательные курсы</button>
+                    </div>
+                    <div class="catalog-header">
+                        <h1 id="catalogMainTitle">Каталог репетиторов</h1>
+                        <div class="sort-section">
+                            <label for="sortSelect">Сортировка:</label>
+                            <select id="sortSelect" class="sort-select">
+                                <option value="default">По умолчанию</option>
+                                <option value="priceAsc">Цена: по возрастанию</option>
+                                <option value="priceDesc">Цена: по убыванию</option>
+                                <option value="ratingDesc">По рейтингу</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="tutorsCatalogArea" class="tutors-area catalog-tutors-area catalog-catalog-panel is-active">
+                        <div class="tutors-grid" id="tutorsContainer">
+                            <div class="loading">Загрузка...</div>
+                        </div>
+                        <div class="catalog-pagination" id="catalogPagination" hidden></div>
+                    </div>
+
+                    <div id="coursesCatalogArea" class="tutors-area catalog-tutors-area catalog-catalog-panel">
+                        <div class="tutors-grid" id="coursesContainer"></div>
+                        <div class="catalog-pagination" id="coursesPagination" hidden></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="compareDock" class="compare-dock" aria-live="polite">
+        <span id="compareDockLabel">Никого не выбрано</span>
+        <button type="button" id="compareGoBtn" class="btn btn-primary" disabled>Сравнить</button>
+        <button type="button" id="compareClearBtn" class="btn-link">Сбросить выбор</button>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TutorFind. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/svg-icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/user-storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>

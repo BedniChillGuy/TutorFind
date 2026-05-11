@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс — TutorFind</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Tutor<span>Find</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="favorite.html">Избранное <span class="favorite-count">0</span></a></li>
+                    <li><a href="recent-compares.html">Сравнения <span class="recent-compare-count">0</span></a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tutor-detail" id="courseDetail">
+                <div class="loading">Загрузка...</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TutorFind. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div id="courseBookingModal" class="modal" hidden>
+        <div class="modal-backdrop" id="courseBookingModalBackdrop"></div>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="courseBookingModalTitle">
+            <button type="button" class="modal-close" id="courseBookingModalClose" aria-label="Закрыть">&times;</button>
+            <h2 id="courseBookingModalTitle">Заявка на курс</h2>
+            <p id="courseBookingLine" class="profile-hint"></p>
+            <form id="courseBookingForm">
+                <input type="hidden" id="courseBookingId" name="courseId" value="">
+                <div class="modal-field">
+                    <label for="courseBookingPhone">Ваш телефон</label>
+                    <input type="tel" id="courseBookingPhone" name="contactPhone" required autocomplete="tel">
+                </div>
+                <div class="modal-field">
+                    <label for="courseBookingEmail">Ваш email</label>
+                    <input type="email" id="courseBookingEmail" name="contactEmail" required autocomplete="email">
+                </div>
+                <div class="modal-field">
+                    <label for="courseBookingMessage">Сообщение</label>
+                    <textarea id="courseBookingMessage" name="message" rows="4" placeholder="Желаемый старт, вопросы по программе…"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                    <button type="button" class="btn btn-secondary" id="courseBookingModalCancel">Отмена</button>
+                </div>
+            </form>
+            <p id="courseBookingSuccessNote" class="profile-hint" hidden>Заявка сохранена в профиле (localStorage).</p>
+        </div>
+    </div>
+
+    <script src="js/svg-icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/user-storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/course-detail.js"></script>
+</body>
+</html>

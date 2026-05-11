@@ -1,0 +1,59 @@
+.header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+    color: var(--color-on-primary);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-on-primary);
+}
+
+.logo span {
+    color: #c5d4e8;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--color-on-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-menu a:hover {
+    opacity: 0.85;
+}
+
+.nav-menu a.active {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.footer {
+    background: var(--color-footer);
+    color: rgba(255, 255, 255, 0.92);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}

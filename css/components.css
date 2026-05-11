@@ -1,0 +1,210 @@
+.favorite-count,
+.recent-compare-count {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--color-on-primary);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+    font-weight: 600;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+    background: var(--color-cta);
+    color: var(--color-on-cta);
+}
+
+.btn-primary:hover {
+    background: var(--color-cta-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background: var(--color-accent-muted);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-back:hover {
+    transform: translateX(-4px);
+    color: var(--color-primary);
+}
+
+.filter-input,
+.filter-select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+.filter-input:focus,
+.filter-select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-muted);
+}
+
+.sort-select {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    margin-left: 0.5rem;
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+.tutors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tutor-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.tutor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.tutor-info {
+    padding: 1.5rem;
+}
+
+.tutor-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.tutor-subject {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.tutor-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.tutor-rating {
+    color: var(--color-rating);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.tutor-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-favorite {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    flex: 1;
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+.btn-favorite.active {
+    background: rgba(184, 134, 11, 0.15);
+    border-color: var(--color-favorite-active);
+    color: var(--color-favorite-active-text);
+    font-weight: 600;
+}
+
+.btn-favorite:hover {
+    background: var(--color-accent-muted);
+    border-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--color-text-muted);
+    grid-column: 1 / -1;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    grid-column: 1 / -1;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.page-title {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+.favorite-tutors {
+    padding: 2rem 0;
+}

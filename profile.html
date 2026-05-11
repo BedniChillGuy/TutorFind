@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль — TutorFind</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Tutor<span>Find</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="favorite.html">Избранное <span class="favorite-count">0</span></a></li>
+                    <li><a href="recent-compares.html">Сравнения <span class="recent-compare-count">0</span></a></li>
+                    <li><a href="profile.html" class="active">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Профиль</h1>
+
+            <div class="profile-layout">
+                <section class="profile-card">
+                    <h2>Мои данные</h2>
+                    <form id="profileForm" class="profile-form">
+                        <div class="field">
+                            <label for="pfName">ФИО</label>
+                            <input type="text" id="pfName" name="displayName" autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="pfEmail">Email</label>
+                            <input type="email" id="pfEmail" name="email" autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label for="pfPhone">Телефон</label>
+                            <input type="tel" id="pfPhone" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="field">
+                            <label for="pfCity">Город</label>
+                            <input type="text" id="pfCity" name="city" autocomplete="address-level2">
+                        </div>
+                        <div class="field">
+                            <label for="pfAbout">О себе (необязательно)</label>
+                            <textarea id="pfAbout" name="about" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                        </div>
+                    </form>
+                    <p id="profileSavedHint" class="profile-hint" hidden>Изменения сохранены.</p>
+                </section>
+
+                <section class="profile-card">
+                    <h2>История просмотров</h2>
+                    <h3 class="profile-subsection-title">Репетиторы</h3>
+                    <ul class="recent-list" id="recentViewsList"></ul>
+                    <h3 class="profile-subsection-title">Курсы</h3>
+                    <ul class="recent-list" id="recentCourseViewsList"></ul>
+                    <div class="profile-toolbar">
+                        <button type="button" id="clearRecentBtn" class="btn btn-secondary">Очистить репетиторов</button>
+                        <button type="button" id="clearRecentCoursesBtn" class="btn btn-secondary">Очистить курсы</button>
+                        <a href="catalog.html" class="btn btn-primary">В каталог</a>
+                    </div>
+                </section>
+
+                <section class="profile-card profile-card--wide">
+                    <h2>Заявки репетиторам</h2>
+                    <div id="requestsList" class="request-list"></div>
+                </section>
+
+                <section class="profile-card profile-card--wide">
+                    <h2>Заявки на курсы</h2>
+                    <div id="courseRequestsList" class="request-list"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TutorFind. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/user-storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

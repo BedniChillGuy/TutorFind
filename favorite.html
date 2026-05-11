@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное - TutorFind</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Tutor<span>Find</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="favorite.html" class="active">Избранное <span class="favorite-count">0</span></a></li>
+                    <li><a href="recent-compares.html">Сравнения <span class="recent-compare-count">0</span></a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Избранное</h1>
+            <div class="favorite-tutors" id="favoriteContainer">
+                <!-- Избранные репетиторы будут загружаться сюда -->
+                <div class="loading">Загрузка...</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TutorFind. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/svg-icons.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/user-storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/favorite.js"></script>
+</body>
+</html>

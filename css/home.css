@@ -1,0 +1,181 @@
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #2a4a6f 100%);
+    color: var(--color-on-primary);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.92;
+}
+
+.subjects {
+    padding: 4rem 0;
+    background: var(--color-surface);
+}
+
+.subjects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.subject-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid var(--color-border);
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.subject-card h3 {
+    color: var(--color-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+}
+
+.subject-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.subject-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subject-icon svg {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.tutor-avatar {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tutor-avatar svg {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+    transition: transform 0.3s ease;
+}
+
+.tutor-card:hover .tutor-avatar svg {
+    transform: scale(1.05);
+}
+
+.tutor-avatar[data-subject="Математика"] {
+    background: linear-gradient(135deg, #5c6d7a 0%, #3d4f5c 100%);
+}
+
+.tutor-avatar[data-subject="Английский язык"] {
+    background: linear-gradient(135deg, #4a6fa5 0%, #2e4a6e 100%);
+}
+
+.tutor-avatar[data-subject="Физика"] {
+    background: linear-gradient(135deg, #5b7c8c 0%, #3a5a6a 100%);
+}
+
+.tutor-avatar[data-subject="Программирование"] {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.tutor-avatar[data-subject="Русский язык"] {
+    background: linear-gradient(135deg, #5c5a72 0%, #3d3b52 100%);
+}
+
+.tutor-avatar[data-subject="История"] {
+    background: linear-gradient(135deg, #6b5d52 0%, #453d36 100%);
+}
+
+.tutor-avatar[data-subject="Биология"] {
+    background: linear-gradient(135deg, #4d6b5c 0%, #355446 100%);
+}
+
+.tutor-avatar[data-subject="Химия"] {
+    background: linear-gradient(135deg, #5a5d72 0%, #3d4055 100%);
+}
+
+/* Аватар курса по направлению */
+.course-avatar {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-avatar svg {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+    transition: transform 0.3s ease;
+}
+
+.tutor-card:hover .course-avatar svg {
+    transform: scale(1.05);
+}
+
+.course-avatar[data-category='Программирование'] {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.course-avatar[data-category='Иностранные языки'] {
+    background: linear-gradient(135deg, #4a6fa5 0%, #2e4a6e 100%);
+}
+
+.course-avatar[data-category='Маркетинг и аналитика'] {
+    background: linear-gradient(135deg, #6b4f7a 0%, #3d2d4a 100%);
+}
+
+.course-avatar[data-category='Дизайн'] {
+    background: linear-gradient(135deg, #5c4a6b 0%, #3a2d45 100%);
+}
+
+.course-avatar[data-category='Математика и логика'] {
+    background: linear-gradient(135deg, #5c6d7a 0%, #3d4f5c 100%);
+}
+
+.course-avatar[data-category='Подготовка к экзаменам'] {
+    background: linear-gradient(135deg, #5a6b72 0%, #3a4a52 100%);
+}
